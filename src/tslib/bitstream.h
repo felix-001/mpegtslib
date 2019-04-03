@@ -15,8 +15,6 @@
 #include <assert.h>
 #include <stdlib.h>
 
-#include "types.h"
-
 #define av_assert0 assert
 #define av_assert2 assert
 #define av_log( a, b, args... ) printf(args)
