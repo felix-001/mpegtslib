@@ -9,6 +9,13 @@
 - [x] 支持g711
 - [x] 跨平台，方便移植
 
+## 编译
+```
+mkdir build
+cd build
+cmake ..
+make
+```
 
 # API说明
 ## 1.创建推流实例
