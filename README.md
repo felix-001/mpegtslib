@@ -104,3 +104,6 @@ int main()
     ts_write_frame( ts, frame );
 }
 ```
+
+# 关于作者
+- 邮箱 : swayinwind@yahoo.com
