@@ -35,14 +35,18 @@ output | ts包输出回调函数
 int ts_write_pat( ts_stream_t *ts )
 ```
 ## 2.1 参数说明
-ts - ts封装实例
+参数 | 说明
+---|---
+ts | ts封装实例
 
 ## 3.写入pmt
 ```
 int ts_write_pmt( ts_stream_t *ts )
 ```
 ### 3.1 参数说明
-ts - ts封装实例
+参数 | 说明
+---|---
+ts | ts封装实例
 
 ## 4.写入pes
 ```
