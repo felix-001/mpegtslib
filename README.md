@@ -61,4 +61,39 @@ frame | 视频或者音频数据
 len | 帧长度
 timestamp | 时间戳
 
+# Quick Start
+
+```
+static int packet_output( uint8_t *buf, uint32_t len )
+{
+    if ( !buf )
+        return -1;
+
+    if ( !app.fp ) {
+        app.fp = fopen( "./output.ts", "w+");
+        if ( !app.fp )
+            return -1;
+    }
+
+    fwrite( buf, 1, len, app.fp );
+
+    return 0;
+}
+
+int main()
+{
+    char *video_data, audio_data;
+    ts_param_t param = 
+    {
+      .output = packet_output
+    };
+    ts_stream_t *ts;
+    frame_info_t frame;
+    
+    frame.frame = video_data;
+    ts = new_ts_stream( &param );
+    ts_write_pat( ts );
+    ts_write_pmt( ts, &frame );
+    ts_write_frame( ts, frame );
+}
 ```
