@@ -69,6 +69,7 @@ len | 帧长度
 timestamp | 时间戳
 
 # Quick Start
+> 具体使用姿势可以参照src/sample/sample.c
 
 ```
 static int packet_output( uint8_t *buf, uint32_t len )
